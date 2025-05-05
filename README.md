@@ -23,12 +23,12 @@ A full-stack Job Portal web application that allows users to browse job listings
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [React Router](https://reactrouter.com/)
-- [Tailwind CSS](https://tailwindcss.com/) *(optional)*
+- [Tailwind CSS](https://tailwindcss.com/) 
 
 ### Backend:
 - [Node.js](https://nodejs.org/)
 - [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/) *(or your DB choice)*
+- [MongoDB](https://www.mongodb.com/)
 
 ---
 
