@@ -16,9 +16,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-  origin: "*", 
+  origin: [
+    "https://job-portal-frontend-ktk3.onrender.com" 
+  ],
   credentials: true,
 };
+
+app.use(cors(corsOptions));
+
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
