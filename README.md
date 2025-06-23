@@ -9,7 +9,32 @@ HomePage :
 ![Screenshot (19)](https://github.com/user-attachments/assets/b41e65c2-9006-4125-b0c8-99b102a88918)
 
 
+Login Page: 
+
+![Screenshot (66)](https://github.com/user-attachments/assets/872afd78-999b-4bc9-85a8-4082d5696623)
+
+
+Singup Page:
+
+![Screenshot (67)](https://github.com/user-attachments/assets/e5d84df4-1100-49ab-b9e5-7ed3cedd54a6)
+
+
+Jobs Page: 
+
+![Screenshot (70)](https://github.com/user-attachments/assets/3d7db72f-de75-462d-8b86-d98c122b54d6)
+
+User Profile Page:
+
+![Screenshot (71)](https://github.com/user-attachments/assets/4f2ddc3d-8f83-4f56-9770-52e789910c61)
+
+
+Admin Page : 
+![Screenshot (75)](https://github.com/user-attachments/assets/b18b66b0-c2c1-46a0-aa96-ccc639eb0517)
+
 ---
+
+Applicant Page:
+![Screenshot (78)](https://github.com/user-attachments/assets/dd2e42d2-5664-4a18-860d-7d96e19bb217)
 
 ## 🚀 Features
 
