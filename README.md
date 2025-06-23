@@ -21,9 +21,10 @@ Singup Page:
 ![Screenshot (67)](https://github.com/user-attachments/assets/e5d84df4-1100-49ab-b9e5-7ed3cedd54a6)
 
 
-Jobs Page: 
+Listed Jobs Page: 
 
 ![Screenshot (70)](https://github.com/user-attachments/assets/3d7db72f-de75-462d-8b86-d98c122b54d6)
+
 
 User Profile Page:
 
