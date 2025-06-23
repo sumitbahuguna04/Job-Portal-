@@ -10,7 +10,6 @@ HomePage :
 ![Screenshot (68)](https://github.com/user-attachments/assets/09e0c73a-5f4f-4745-8312-bfbb4ac05a3b)
 
 
-
 Login Page: 
 
 ![Screenshot (66)](https://github.com/user-attachments/assets/872afd78-999b-4bc9-85a8-4082d5696623)
@@ -33,12 +32,14 @@ User Profile Page:
 
 Post Jobs:
 
-![Screenshot (76)](https://github.com/user-attachments/assets/ed323a9f-356b-431a-8d5c-ca65a653d8f5)
+
+![Screenshot (96)](https://github.com/user-attachments/assets/c861495d-3186-46f3-a9aa-dd17b8856f8c)
 
 
 Filter Job:
 
-![Screenshot (75)](https://github.com/user-attachments/assets/b18b66b0-c2c1-46a0-aa96-ccc639eb0517)
+![Screenshot (95)](https://github.com/user-attachments/assets/a458621d-8ffc-457f-bba9-76f71c276a09)
+
 
 ---
 
