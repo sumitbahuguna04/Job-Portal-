@@ -19,6 +19,9 @@ const corsOptions = {
   origin: "*", 
   credentials: true,
 };
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
 
 
 app.use(cors(corsOptions));
