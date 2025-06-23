@@ -6,7 +6,9 @@ A full-stack Job Portal web application that allows users to browse job listings
 ## 🚀 Preview
 
 HomePage : 
-![Screenshot (19)](https://github.com/user-attachments/assets/b41e65c2-9006-4125-b0c8-99b102a88918)
+
+![Screenshot (68)](https://github.com/user-attachments/assets/09e0c73a-5f4f-4745-8312-bfbb4ac05a3b)
+
 
 
 Login Page: 
