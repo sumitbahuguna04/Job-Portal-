@@ -16,8 +16,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-import cors from "cors";
-
 const corsOptions = {
   origin: "https://job-portal-frontend-rsnu.onrender.com", 
   credentials: true,                                       
