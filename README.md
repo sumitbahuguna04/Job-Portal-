@@ -28,7 +28,13 @@ User Profile Page:
 ![Screenshot (71)](https://github.com/user-attachments/assets/4f2ddc3d-8f83-4f56-9770-52e789910c61)
 
 
-Admin Page : 
+Post Jobs:
+
+![Screenshot (76)](https://github.com/user-attachments/assets/ed323a9f-356b-431a-8d5c-ca65a653d8f5)
+
+
+Filter Job:
+
 ![Screenshot (75)](https://github.com/user-attachments/assets/b18b66b0-c2c1-46a0-aa96-ccc639eb0517)
 
 ---
