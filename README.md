@@ -3,6 +3,11 @@
 A full-stack Job Portal web application that allows users to browse job listings and companies to post job openings. Built using **Vite** for lightning-fast frontend development with **React**, and **Node.js** for a robust backend.
 
 
+## 🚀 Preview
+
+HomePage : 
+![Screenshot (19)](https://github.com/user-attachments/assets/b41e65c2-9006-4125-b0c8-99b102a88918)
+
 
 ---
 
