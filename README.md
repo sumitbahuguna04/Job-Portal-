@@ -2,6 +2,9 @@
 
 A full-stack Job Portal web application that allows users to browse job listings and companies to post job openings. Built using **Vite** for lightning-fast frontend development with **React**, and **Node.js** for a robust backend.
 
+## 🚀 Live Link:
+https://job-portal-frontend-rsnu.onrender.com/
+
 
 ## 🚀 Preview
 
