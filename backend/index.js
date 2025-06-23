@@ -19,7 +19,7 @@ app.use(cookieParser());
 import cors from "cors";
 
 const corsOptions = {
-  origin: "https://job-portal-frontend-ktk3.onrender.com", 
+  origin: "https://job-portal-frontend-rsnu.onrender.com", 
   credentials: true,                                       
 };
 
