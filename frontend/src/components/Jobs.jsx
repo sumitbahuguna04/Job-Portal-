@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./shared/Navbar";
 import FilterCard from "./FilterCard";
-import Job from "./job";
+import Job from "./Job";
 import { useDispatch, useSelector } from "react-redux";
 import useGetAlljobs from "@/hooks/useGetAlljobs";
 
