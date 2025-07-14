@@ -60,10 +60,10 @@ export default function Login() {
   return (
     <div>
       <Navbar />
-      <div className="flex  text-white items-center justify-center max-w-7xl mx-auto">
+      <div className="flex  text-white items-center justify-center max-w-7xl mx-auto ">
         <form
           onSubmit={submitHandler}
-          className="w-1/2 border border-[#283347]  bg-[#030712] rounded-md p-4 my-10"
+          className=" border sm:w-1/2 border-[#283347]  bg-[#030712] rounded-md p-5 my-10"
         >
           <h1 className="font-bold text-xl mb-5">Log In</h1>
 
