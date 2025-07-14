@@ -81,10 +81,10 @@ export default function Signup() {
     <div>
       <Navbar />
 
-      <div className="flex  text-white items-center justify-center max-w-7xl mx-auto">
+      <div className="flex text-white items-center justify-center max-w-7xl px-8 sm:px-0 mx-auto">
         <form
           onSubmit={submitHandler}
-          className="w-1/2 border border-[#283347] bg-[#030712] rounded-md p-4 my-10"
+          className=" border sm:w-1/2  border-[#283347] bg-[#030712] rounded-md p-4 my-10"
         >
           <h1 className="font-bold text-xl mb-5">Sign Up</h1>
           <div className="my-4">
@@ -131,9 +131,9 @@ export default function Signup() {
               placeholder="enter your password"
             />
           </div>
-          <div className="flex items-center justify-between">
-            <RadioGroup className="flex items-center gap-4">
-              <div className="flex items-center space-x-2">
+          <div className="flex flex-col sm:flex-row items-center justify-between">
+            <RadioGroup className="flex items-center gap-10 sm:gap-4">
+              <div className="flex  items-center space-x-2">
                 <Input
                   type="radio"
                   name="role"
@@ -156,7 +156,7 @@ export default function Signup() {
                 <Label htmlFor="r2">Recruiter</Label>
               </div>
             </RadioGroup>
-            <div className="flex items-center gap-2">
+            <div className="flex mt-2 sm:mt-0 items-center gap-2">
               <Label className="">Profile</Label>
               <Input
                 accept="image/*"
