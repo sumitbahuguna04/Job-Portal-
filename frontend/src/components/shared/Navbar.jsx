@@ -37,37 +37,40 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#151c29] text-white">
-      <div className="flex items-center justify-between mx-auto max-w-7xl w-full h-16 px-4 overflow-hidden">
+      <div className="flex items-center justify-between mx-auto max-w-7xl h-18 px-4 overflow-hidden">
         <div className="font-[Orbitron] ">
          <h1 className="sm:text-xl ">NEXT<span className="pl-2 sm:text-xl  shadow-2xl  text-green-500 ">HIRE</span></h1>
         </div>
         <div className="flex items-center sm:gap-6 gap-2 flex-wrap">
-          <ul className="flex items-center gap-2 sm:gap-4 whitespace-nowrap">
-            {user && user.role === "recruiter" ? (
-              <>
-                <li className="cursor-pointer hover:text-blue-500">
-                  <Link to="/admin/companies">Companies</Link>
-                </li>
-                <li className="cursor-pointer hover:text-blue-500">
-                  <Link to="/admin/comapnies/jobs">Job</Link>
-                </li>
-              </>
-            ) : (
-              <>
-                <li className="cursor-pointer hover:text-blue-500">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="cursor-pointer hover:text-blue-500">
-                  <Link to="/jobs">Jobs</Link>
-                </li>
-                <li className="cursor-pointer hover:text-blue-500">
-                  <Link to="/browse">Browse</Link>
-                </li>
-              </>
-            )}
-          </ul>
+          <ul className="flex items-center gap-2  sm:gap-4 whitespace-nowrap">
+  {user ? (
+    user.role === "recruiter" ? (
+      <>
+        <li className="cursor-pointer hover:text-blue-500">
+          <Link to="/admin/companies">Companies</Link>
+        </li>
+        <li className="cursor-pointer hover:text-blue-500">
+          <Link to="/admin/comapnies/jobs">Job</Link>
+        </li>
+      </>
+    ) : (
+      <>
+        <li className="cursor-pointer hover:text-blue-500">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="cursor-pointer hover:text-blue-500">
+          <Link to="/jobs">Jobs</Link>
+        </li>
+        <li className="cursor-pointer hover:text-blue-500">
+          <Link to="/browse">Browse</Link>
+        </li>
+      </>
+    )
+  ) : null}
+</ul>
+
           {!user ? (
-            <div className="flex items-center gap-3">
+            <div className="flex  sm:items-center gap-3">
               <Link to="/login">
                 <Button variant="" className="cursor-pointer border border-[#474e52] hover:bg-[#272c30] hover:border-[#272c30]">
                   Log in
