@@ -10,7 +10,6 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import useGetAlljobs from "@/hooks/useGetAlljobs";
 import { setSearchJob } from "@/redux/jobSlice";
-import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom";
 
 function CategoryCarousel() {
@@ -24,7 +23,7 @@ function CategoryCarousel() {
   };
   useGetAlljobs();
   return (
-    <div className="text-white w-full  max-w-3xl mx-auto p-20">
+    <div className="text-white w-full  max-w-3xl mx-auto p-2 sm:p-20 mb-10">
       <Carousel className="cursor-pointer ">
         <CarouselContent className="">
           {allJobs.map((category, index) => (
