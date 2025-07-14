@@ -39,10 +39,10 @@ const Navbar = () => {
     <div className="bg-[#151c29] text-white">
       <div className="flex items-center justify-between mx-auto max-w-7xl w-full h-16 px-4 overflow-hidden">
         <div className="font-[Orbitron] ">
-         <h1 className=" text-xl ">NEXT<span className="pl-2 text-xl  shadow-2xl  text-green-500 ">HIRE</span></h1>
+         <h1 className="sm:text-xl ">NEXT<span className="pl-2 sm:text-xl  shadow-2xl  text-green-500 ">HIRE</span></h1>
         </div>
-        <div className="flex items-center gap-6 flex-wrap">
-          <ul className="flex font-medium items-center gap-4 whitespace-nowrap">
+        <div className="flex items-center sm:gap-6 gap-2 flex-wrap">
+          <ul className="flex items-center gap-2 sm:gap-4 whitespace-nowrap">
             {user && user.role === "recruiter" ? (
               <>
                 <li className="cursor-pointer hover:text-blue-500">
@@ -89,7 +89,7 @@ const Navbar = () => {
                   />
                 </Avatar>
               </PopoverTrigger>
-              <PopoverContent className="w-80 text-white bg-[#2a323f] border border-[#4f5c73]">
+              <PopoverContent className="w-60 mr-2 sm:w-80 text-white bg-[#2a323f] border border-[#4f5c73]">
                 <div className="flex gap-4">
                   <Avatar>
                     <AvatarImage
