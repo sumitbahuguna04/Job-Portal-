@@ -19,11 +19,11 @@ function HeroSection() {
   };
   return (
     <div className="text-center #262C36">
-      <div className="flex text-white flex-col gap-5 my-10">
-        <span className="bg-[#1e222ff1] mx-auto px-4 py-2 rounded-full  text-[#8980f0] ">
+      <div className="flex text-white flex-col gap-5 my-10 p-2 ">
+        <span className="bg-[#1e222ff1] mx-auto px-4 py-3 rounded-full  text-[#8980f0] ">
           The best way to shape your career
         </span>
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-4xl sm:text-5xl font-bold">
           {" "}
           Your Dream job
           <br /> Starts <span className="text-[#655ef2]">Here</span>
@@ -35,7 +35,7 @@ function HeroSection() {
           future—one application at a time.
         </p>
         <div className="flex justify-center">
-          <div className="flex w-full max-w-sm items-center space-x-2">
+          <div className="flex w-full max-w-sm items-center space-x-3">
             <Input
             className="border-[#3d4046]"
               onChange={(e) => setquery(e.target.value)}
