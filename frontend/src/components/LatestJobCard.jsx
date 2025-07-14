@@ -25,7 +25,7 @@ function LatestJobCard({ job }) {
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 my-4">
+      <div className="flex items-start sm:items-center gap-4 my-4">
         <Avatar className="w-12 h-12 rounded-full overflow-hidden">
           <AvatarImage
             src={job?.company?.logo}
@@ -39,12 +39,12 @@ function LatestJobCard({ job }) {
         </div>
       </div>
 
-      <div className="mb-4 ">
+      <div className="mb-2 sm:mb-4 ">
         <h1 className="font-bold  text-lg">{job?.title}</h1>
         <p className="text-sm text-gray-400 mt-1">{job?.description}</p>
       </div>
 
-      <div className="flex  text-black flex-wrap gap-2">
+      <div className="flex text-black flex-wrap gap-3">
         <Badge className="font-bold text-[#51A2FF] bg-[#16263E] border border-[#274C79] ">
           {`${job?.position} Positions`}
         </Badge>
