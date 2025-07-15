@@ -91,7 +91,7 @@ function Jobdescription() {
                 className={`rounded-lg ${
                   isApplied
                     ? "bg-[#1f2937d3] mt-3 text-gray-300 cursor-not-allowed"
-                    : "bg-[#6225C5] hover:bg-[#6225c5cf] cursor-pointer"
+                    : "bg-[#6225C5] mt-3 hover:bg-[#6225c5cf] cursor-pointer"
                 }`}
               >
                 {isApplied ? "Already Applied" : "Apply Now"}
