@@ -10,8 +10,7 @@ import UpdateProfile from "./UpdateProfile";
 import { useSelector } from "react-redux";
 import Footer from "./shared/Footer";
 import useGetAllAppliedJobs from "@/hooks/useGetAllAppliedJobs";
-import SavedJobs from "./SavedJobs";
-
+import SavedJobs from "./savedJobs";
 
 const profileupdate = () => {};
 const valToCaptital = (str) => {
@@ -54,7 +53,7 @@ function Profile() {
         </Button>
       </div>
 
-      <div className="max-w-4xl mx-auto rounded-2xl bg-[#030712] border border-[#2b384a] my-5 p-8 mt-10">
+      <div className="max-w-4xl m-4 sm:mx-auto rounded-2xl bg-[#481dac] sm:bg-[#030712] border border-[#2b384a] my-5 p-8 mt-10">
         <div className="flex justify-between">
           <div className="flex items-center">
             <Avatar className="h-23 cursor-pointer w-23">
@@ -125,7 +124,7 @@ function Profile() {
       {/* Applied Jobs Section */}
       <div
         ref={appliedRef}
-        className="bg-[#030712] border border-[#2b384a] max-w-4xl mx-auto rounded-2xl my-5 p-8 mb-10 mt-10"
+        className="bg-[#481dac] sm:bg-[#030712] border border-[#2b384a] max-w-4xl m-4 sm:mx-auto rounded-2xl my-5 p-8 mb-10 mt-10"
       >
         <h1 className="font-medium text-xl">Applied Jobs</h1>
         <Appliedjobs />
@@ -134,7 +133,7 @@ function Profile() {
       {/* Saved Jobs Section */}
       <div
         ref={savedRef}
-        className="bg-[#030712] border border-[#2b384a] max-w-4xl mx-auto rounded-2xl  my-5 p-8 mb-10 mt-10"
+        className="bg-[#481dac] sm:bg-[#030712] border border-[#2b384a] max-w-4xl m-4 sm:mx-auto rounded-2xl  my-5 p-8 mb-10 mt-10"
       >
         <h1 className="font-medium text-xl">Saved Jobs</h1>
         <SavedJobs />
