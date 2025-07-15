@@ -91,7 +91,7 @@ function AdminCreateJob() {
             <div className="space-y-5">
               {/* Job Details Section */}
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Job Title</Label>
+                <Label className="text-left sm:text-right">Job Title</Label>
                 <Input
                   name="title"
                   value={input.title}
@@ -102,7 +102,7 @@ function AdminCreateJob() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Description</Label>
+                <Label className="text-left sm:text-right">Description</Label>
                 <Input
                   name="description"
                   value={input.description}
@@ -113,7 +113,7 @@ function AdminCreateJob() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Requirements</Label>
+                <Label className="text-left sm:text-right">Requirements</Label>
                 <Input
                   name="requirements"
                   type="text"
@@ -125,7 +125,7 @@ function AdminCreateJob() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Salary</Label>
+                <Label className="text-left sm:text-right">Salary</Label>
                 <Input
                   name="salary"
                   type="number"
@@ -137,7 +137,7 @@ function AdminCreateJob() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Location</Label>
+                <Label className="text-left sm:text-right">Location</Label>
                 <Input
                   name="location"
                   value={input.location}
@@ -149,7 +149,7 @@ function AdminCreateJob() {
 
               {/* Job Type and Experience */}
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Job Type</Label>
+                <Label className="text-left sm:text-right">Job Type</Label>
                 <Input
                   name="jobType"
                   value={input.jobType}
@@ -160,7 +160,7 @@ function AdminCreateJob() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Experience Level</Label>
+                <Label className="text-left sm:text-right">Experience Level</Label>
                 <Input
                   name="experience"
                   type="number"
@@ -172,7 +172,7 @@ function AdminCreateJob() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">No. of Positions</Label>
+                <Label className="text-left sm:text-right">No. of Positions</Label>
                 <Input
                   name="position"
                   type="number"
@@ -186,7 +186,7 @@ function AdminCreateJob() {
               {/* Company Dropdown */}
               {companies.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4 ">
-                  <Label className="text-right ">Company</Label>
+                  <Label className=" text-left sm:text-right">Company</Label>
                   <Select onValueChange={selectChangeHandler}>
                     <SelectTrigger className="sm:col-span-3  border w-[180px] border-[#2b384a]">
                       <SelectValue placeholder="Select a Company" />
