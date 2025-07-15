@@ -67,12 +67,12 @@ function Jobdescription() {
   return (
     <div>
       <Navbar />
-      <div className="mt-10 max-w-4xl rounded-2xl mx-auto bg-[#030712] border border-[#2b384a]">
-        <div className="m-10 text-white">
-          <div className="flex items-center justify-between">
-            <div className="rounded-2xl p-3">
+    <div className="p-4 sm:p-0">  <div className="mt-10 lg:max-w-4xl sm:max-w-2xl rounded-2xl mx-auto bg-[#030712] border border-[#2b384a]">
+        <div className="p-5 sm:p-10 text-white">
+          <div className="flex flex-col sm:flex-row  sm:items-center justify-between">
+            <div className="rounded-2xl sm:p-3">
               <h1 className="font-bold text-xl">{singleJob?.title}</h1>
-              <div className="flex items-center gap-2 mt-4 text-black">
+              <div className="flex items-center gap-3 mt-4 text-black">
                  <Badge className="font-bold text-[#51A2FF] bg-[#16263E] border border-[#274C79] ">
                          {`${singleJob?.position} Positions`}
                        </Badge>
@@ -90,7 +90,7 @@ function Jobdescription() {
                 onClick={isApplied ? null : applyJobHandler}
                 className={`rounded-lg ${
                   isApplied
-                    ? "bg-[#1f2937d3] text-gray-300 cursor-not-allowed"
+                    ? "bg-[#1f2937d3] mt-3 text-gray-300 cursor-not-allowed"
                     : "bg-[#6225C5] hover:bg-[#6225c5cf] cursor-pointer"
                 }`}
               >
@@ -171,7 +171,7 @@ function Jobdescription() {
             </h1>
           </div>
         </div>
-      </div>
+      </div></div>
     </div>
   );
 }
