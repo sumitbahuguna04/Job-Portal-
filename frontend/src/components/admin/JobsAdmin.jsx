@@ -16,10 +16,10 @@ function JobsAdmin() {
     dispatch(setSearchJobByText(input));
   });
   return (
-    <div className="text-white overflow-hidden">
+     <div className="text-white overflow-hidden">
       <Navbar />
-      <div className="max-w-6xl mx-auto my-10 ">
-        <div className="flex items-center justify-between">
+      <div className="max-w-6xl px-5 mx-auto my-10 ">
+        <div className="flex gap-5 items-center justify-between">
           <Input
             className="w-full max-w-sm border-[#2b384a]"
             placeholder="Filter by name"
