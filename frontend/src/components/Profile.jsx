@@ -10,7 +10,7 @@ import UpdateProfile from "./UpdateProfile";
 import { useSelector } from "react-redux";
 import Footer from "./shared/Footer";
 import useGetAllAppliedJobs from "@/hooks/useGetAllAppliedJobs";
-import SavedJobs from "./savedJobs";
+import SavedJobs from "./SavedJobs";
 
 const profileupdate = () => {};
 const valToCaptital = (str) => {
