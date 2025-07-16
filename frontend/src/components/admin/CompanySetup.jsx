@@ -82,7 +82,7 @@ function CompanySetup() {
   return (
     <div className="text-white">
       <Navbar />
-      <div className=" max-w-2xl mx-auto px-4 sm:px-6">
+      <div className=" max-w-2xl mb-10 sm:mb-0  mx-auto px-4 sm:px-6">
         <div className="flex items-center gap-4 p-4 sm:p-8">
           <Button
             onClick={() => navigate("/admin/companies")}
