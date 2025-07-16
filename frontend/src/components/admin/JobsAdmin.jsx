@@ -28,7 +28,7 @@ function JobsAdmin() {
 
           <Button
             onClick={() => navigate("/admin/companies/createjobs")}
-            className="border border-[#222f3e] hover:bg-[#1F2937] hover:border-[#1F2937] transition  cursor-pointer duration-200"
+            className="border bg-[#703ac7] border-[#222f3e] hover:bg-[#1F2937] hover:border-[#1F2937] transition  cursor-pointer duration-200"
           >
             <EditIcon className="mr-2" />
             New Jobs
