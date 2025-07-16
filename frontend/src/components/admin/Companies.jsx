@@ -34,9 +34,9 @@ function Companies() {
     dispatch(setSearchbycompany(input));
   });
   return (
-    <div className="text-white  overflow-hidden">
+     <div className="text-white  overflow-hidden">
       <Navbar />
-      <div className="max-w-6xl p-2 lg:p-0 mx-auto my-5 sm:mt-10 ">
+      <div className="max-w-6xl p-5   md:p-5  lg:p-0 mx-auto my-5 sm:mt-10 ">
         <div className="flex gap-3 items-center justify-between">
           <Input
             className="w-full max-w-sm border-[#42608a]"
