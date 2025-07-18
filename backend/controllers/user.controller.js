@@ -68,8 +68,8 @@ export const login = async (req, res) => {
 
    res.cookie("token", token, {
   httpOnly: true,
-  secure: true,        // ✅ needed for HTTPS
-  sameSite: "None",    // ✅ needed for cross-origin cookies
+  secure: true,       
+  sameSite: "None",    
   maxAge: 24 * 60 * 60 * 1000, // 1 day
 });
 
