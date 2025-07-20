@@ -70,7 +70,7 @@ function Job({ job }) {
   };
 
   return (
-    <div className="w-full max-w-[600px] mx-auto text-white p-4 sm:p-5 rounded-md shadow-xl bg-[#030712] border border-[#2b384a]">
+    <div className="w-full max-w-[600px] mx-auto text-white p-4 sm:p-5 rounded-md shadow-xl bg-[#0f1627] border border-[#3f4853]">
       {/* Top Row: Time and Save Button */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
         <p className="text-gray-400 text-sm">
