@@ -23,18 +23,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-
-app.use(cors(corsOptions));
-
-
-app.use(cors(corsOptions));
-
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
-
-
-app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 
