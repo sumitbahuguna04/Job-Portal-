@@ -80,69 +80,68 @@ export default function Signup() {
   return (
     <div>
       <Navbar />
-
       <div className="flex text-white items-center justify-center max-w-7xl px-8 sm:px-0 mx-auto">
         <form
           onSubmit={submitHandler}
-          className=" border sm:w-1/2  border-[#283347] bg-[#030712] rounded-md p-4 my-10"
+          className="sm:w-1/2 bg-[#1e2126] border border-[#2f3848] rounded-md p-6 my-10 shadow-lg"
         >
-          <h1 className="font-bold text-xl mb-5">Sign Up</h1>
+          <h1 className="font-bold text-2xl mb-6 text-white">Sign Up</h1>
           <div className="my-4">
-            <Label className="">Full Name</Label>
+            <Label className="text-gray-300">Full Name</Label>
             <Input
-              className="border-[#283347] text-[#7744c7]"
+              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
               type="text"
               value={input.fullname}
               name="fullname"
               onChange={changeEventHandler}
-              placeholder="enter your name"
+              placeholder="Enter your name"
             />
           </div>
           <div className="my-4">
-            <Label className="">Email</Label>
+            <Label className="text-gray-300">Email</Label>
             <Input
-              className="border-[#283347] text-[#7744c7]"
+              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
               type="email"
               value={input.email}
               name="email"
               onChange={changeEventHandler}
-              placeholder="enter your email"
+              placeholder="Enter your email"
             />
           </div>
           <div className="my-4">
-            <Label className="">Phone Number</Label>
+            <Label className="text-gray-300">Phone Number</Label>
             <Input
-              className="border-[#283347] text-[#7744c7]"
+              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
               type="text"
               value={input.phoneNumber}
               name="phoneNumber"
               onChange={changeEventHandler}
-              placeholder="enter your phone number"
+              placeholder="Enter your phone number"
             />
           </div>
           <div className="my-4">
-            <Label className="">Password</Label>
+            <Label className="text-gray-300">Password</Label>
             <Input
-              className="border-[#283347] text-[#7744c7] "
+              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
               type="password"
               value={input.password}
               name="password"
               onChange={changeEventHandler}
-              placeholder="enter your password"
+              placeholder="Enter your password"
             />
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <RadioGroup className="flex items-center gap-10 sm:gap-4">
-              <div className="flex  items-center space-x-2">
+              <div className="flex items-center space-x-2">
                 <Input
                   type="radio"
                   name="role"
                   value="student"
                   checked={input.role === "student"}
                   onChange={changeEventHandler}
-                  className="cursor-pointer"
+                  className="cursor-pointer border-[#3a4557] text-purple-500"
                 />
-                <Label htmlFor="r1">Student</Label>
+                <Label className="text-gray-300">Student</Label>
               </div>
               <div className="flex items-center space-x-2">
                 <Input
@@ -151,37 +150,40 @@ export default function Signup() {
                   value="recruiter"
                   checked={input.role === "recruiter"}
                   onChange={changeEventHandler}
-                  className="cursor-pointer"
+                  className="cursor-pointer border-[#3a4557] text-purple-500"
                 />
-                <Label htmlFor="r2">Recruiter</Label>
+                <Label className="text-gray-300">Recruiter</Label>
               </div>
             </RadioGroup>
             <div className="flex mt-2 sm:mt-0 items-center gap-2">
-              <Label className="">Profile</Label>
+              <Label className="text-gray-300">Profile</Label>
               <Input
                 accept="image/*"
                 type="file"
                 onChange={changeFileHandler}
-                className=" border-[#283347] cursor-pointer"
+                className="border-[#3a4557] cursor-pointer bg-[#2a2e36] text-white"
               />
             </div>
           </div>
           {loading ? (
-            <Button className="w-full my-4">
+            <Button className="w-full my-4 bg-gradient-to-r from-purple-700 to-purple-500 text-white">
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Please wait
             </Button>
           ) : (
             <Button
               type="submit"
-              className=" w-full  items-center  my-4 cursor-pointer bg-[#6225C5] hover:bg-[#6225c5d4]"
+              className="w-full my-4 bg-[#6dd3db] hover:bg-[#6dd4dbe9] text-black font-semibold"
             >
               Sign Up
             </Button>
           )}
-          <span>
+          <span className="text-gray-300">
             Already have an account?
-            <Link to="/login" className="p-2 text underline text-blue-400 ">
+            <Link
+              to="/login"
+              className="p-2 underline text-[#6dd3db] hover:text-[#5bbfc7]"
+            >
               Login
             </Link>
           </span>
