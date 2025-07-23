@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-[#151c29] text-white">
+     <div className="bg-[#1C1F24] text-white">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-18 px-4 overflow-hidden">
         <div className="font-[Orbitron] ">
          <h1 className="sm:text-xl ">NEXT<span className="pl-2 sm:text-xl  shadow-2xl  text-green-500 ">HIRE</span></h1>
@@ -70,14 +70,14 @@ const Navbar = () => {
 </ul>
 
           {!user ? (
-            <div className="flex  sm:items-center gap-3">
+            <div className="flex text-black sm:items-center gap-3">
               <Link to="/login">
-                <Button variant="" className="cursor-pointer border border-[#474e52] hover:bg-[#272c30] hover:border-[#272c30]">
+                <Button variant="" className="cursor-pointer font-bold bg-[#fff] border  hover:bg-[#ffffffec] ">
                   Log in
                 </Button>
               </Link>
               <Link to="/signup">
-                <Button className="cursor-pointer bg-[#5b21b6] hover:bg-[#5a21b6cb] text-white">
+                <Button className="cursor-pointe cursor-pointer  border border-[#525458] text-white">
                   Sign up
                 </Button>
               </Link>
