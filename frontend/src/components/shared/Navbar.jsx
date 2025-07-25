@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-  <div className="bg-[#1C1F24] text-white">
+  <div className="bg-[#16181c] text-white">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-18 px-2 overflow-hidden">
        <div className="font-[Orbitron] cursor-pointer p-3 rounded-2xl text-center hover:scale-95 active:scale-95 transition duration-200 hover:bg-[#23262c]" onClick={()=>navigate('/')}>
   <h1 className="sm:text-xl">NEXT<span className="pl-2 sm:text-xl shadow-2xl text-green-500">HIRE</span></h1>
