@@ -53,7 +53,7 @@ function Profile() {
         </Button>
       </div>
 
-      <div className="max-w-4xl mx-auto rounded-2xl bg-[#24282c] border border-[#31353b] my-5 p-8 mt-10">
+      <div className="max-w-4xl  mx-3 sm:mx-5 md:mx-7 lg:mx-auto rounded-2xl bg-[#24282c] border border-[#31353b] my-5 p-8 mt-10">
         <div className="flex justify-between">
           <div className="flex items-center">
             <Avatar className="h-23 cursor-pointer w-23">
@@ -124,7 +124,7 @@ function Profile() {
       {/* Applied Jobs Section */}
       <div
         ref={appliedRef}
-        className="bg-[#24282c] border border-[#31353b] max-w-4xl mx-auto rounded-2xl my-5 p-8 mb-10 mt-10"
+        className="bg-[#24282c] border border-[#31353b] max-w-4xl  mx-3 sm:mx-5 md:mx-7 lg:mx-auto rounded-2xl my-5 p-8 mb-10 mt-10"
       >
         <h1 className="font-medium text-xl">Applied Jobs</h1>
         <Appliedjobs />
@@ -133,7 +133,7 @@ function Profile() {
       {/* Saved Jobs Section */}
       <div
         ref={savedRef}
-        className="bg-[#24282c] border  border-[#31353b] max-w-4xl mx-auto rounded-2xl  my-5 p-8 mb-10 mt-10"
+        className="bg-[#24282c] border  border-[#31353b] max-w-4xl  mx-3 sm:mx-5 md:mx-7 lg:mx-auto rounded-2xl  my-5 p-8 mb-10 mt-10"
       >
         <h1 className="font-medium text-xl">Saved Jobs</h1>
         <SavedJobs />
