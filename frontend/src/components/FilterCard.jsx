@@ -45,7 +45,7 @@ function FilterCard() {
   },[Radiovalue]);
 
   return (
-    <div className="text-white  cursor-pointer w-60 p-3 rounded-md bg-[#030712] border border-[#2c384a] ">
+       <div className="text-white  cursor-pointer w-80 sm:w-60 p-3 rounded-md bg-[#22232e] border border-[#3d4046]">
       <div>
         <h1 className="font-bold text-xl">Filter Jobs</h1>
         <hr className="mt-3" />
