@@ -70,77 +70,78 @@ function Job({ job }) {
   };
 
   return (
-    <div className="w-full max-w-[600px] mx-auto text-white p-4 sm:p-5 rounded-md shadow-xl bg-[#0f1627] border border-[#3f4853]">
-      {/* Top Row: Time and Save Button */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-        <p className="text-gray-400 text-sm">
-          {daysAgoFun(job?.createdAt) === 0
-            ? "Today"
-            : `${daysAgoFun(job?.createdAt)} days ago`}
-        </p>
-        <Button
-          variant="outline"
-          className={`rounded-full border-[#324157] size-8 ${
-            isSaved ? "text-[#fff]" : ""
+ <div className="w-full max-w-[600px] mx-auto text-white p-4 sm:p-5 rounded-md shadow-xl bg-[#22232e] border border-[#3d4046] flex flex-col justify-between min-h-[330px]">
+  
+  <div>
+    <div className="flex flex-row items-start sm:items-center justify-between gap-2">
+      <p className="text-gray-400 text-sm">
+        {daysAgoFun(job?.createdAt) === 0
+          ? "Today"
+          : `${daysAgoFun(job?.createdAt)} days ago`}
+      </p>
+      <Button
+        variant="outline"
+        className={`rounded-full border-[#4c4f5e] bg-[#2a2c35] hover:bg-[#3a3d49] size-8 ${
+          isSaved ? "text-[#8760D4]" : "text-gray-300"
+        }`}
+      >
+        <Bookmark
+          className={`w-4 h-4 ${
+            isSaved ? "fill-current text-[#8760D4]" : "text-gray-300"
           }`}
-        >
-          <Bookmark
-            className={`w-4 h-4 ${
-              isSaved ? "fill-current text-[#eceaf0]" : ""
-            }`}
-          />
-        </Button>
-      </div>
+        />
+      </Button>
+    </div>
 
-      {/* Company Info */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 my-4">
-        <Avatar className="rounded-full overflow-hidden size-12">
-          <AvatarImage src={job?.company?.logo} alt="Company Logo" />
-        </Avatar>
-        <div>
-          <h1 className="text-base sm:text-lg font-semibold">
-            {job?.company?.name}
-          </h1>
-          <p className="text-sm text-gray-400">{job?.location}</p>
-        </div>
-      </div>
-
-      <div className="mb-3">
-        <h1 className="font-bold text-base sm:text-lg mb-1">{job?.title}</h1>
-        <p className="text-gray-400 text-sm break-words">{job?.description}</p>
-      </div>
-
-      <div className="flex flex-wrap gap-2 py-3">
-        <Badge className="font-bold text-[#51A2FF] bg-[#16263E] border border-[#274C79] ">
-          {`${job?.position} Positions`}
-        </Badge>
-        <Badge className="font-bold text-[#F0B100] bg-[#272A24] border border-[#524A1D] ">
-          {job?.jobType}
-        </Badge>
-        <Badge className="font-bold text-[#0de045c8] bg-[#0E2A2C] border border-[#0B4A33]">
-          {`${job?.salary} LPA`}
-        </Badge>
-      </div>
-
-     
-      <div className="flex flex-col sm:flex-row gap-3 mt-3">
-        <Button
-          onClick={() => navigate(`/description/${job._id}`)}
-          className="cursor-pointer bg-[#6D28D9] hover:bg-[#6c28d9d8] w-full sm:w-auto"
-        >
-          Details
-        </Button>
-        <Button
-          onClick={() =>
-            isSaved ? unsaveJob(job._id) : statusHandler(job._id)
-          }
-          className="cursor-pointer bg-[#6D28D9] hover:bg-[#6c28d9d8] w-full sm:w-auto"
-        >
-          Save
-          {!isSaved ? <PlusIcon /> : <PanelRightDashedIcon />}
-        </Button>
+    
+    <div className="flex flex-row items-start sm:items-center gap-4 my-4">
+      <Avatar className="rounded-full overflow-hidden size-12">
+        <AvatarImage src={job?.company?.logo} alt="Company Logo" />
+      </Avatar>
+      <div>
+        <h1 className="text-base sm:text-lg font-semibold">{job?.company?.name}</h1>
+        <p className="text-sm text-gray-400">{job?.location}</p>
       </div>
     </div>
+
+    <div className="mb-3 flex-1">
+      <h1 className="font-bold text-base sm:text-lg mb-1">{job?.title}</h1>
+      <p className="text-gray-400 text-sm break-words line-clamp-3">
+        {job?.description}
+      </p>
+    </div>
+
+  
+    <div className="flex flex-wrap gap-2 py-3">
+      <Badge className="font-bold text-[#51A2FF] bg-[#16263E] border border-[#274C79]">
+        {`${job?.position} Positions`}
+      </Badge>
+      <Badge className="font-bold text-[#F0B100] bg-[#272A24] border border-[#524A1D]">
+        {job?.jobType}
+      </Badge>
+      <Badge className="font-bold text-[#0de045c8] bg-[#0E2A2C] border border-[#0B4A33]">
+        {`${job?.salary} LPA`}
+      </Badge>
+    </div>
+  </div>
+
+
+  <div className="flex flex-col sm:flex-row gap-3 mt-3">
+    <Button
+      onClick={() => navigate(`/description/${job._id}`)}
+      className="cursor-pointer bg-[#8760D4] hover:bg-[#926ae1] w-full sm:w-auto"
+    >
+      Details
+    </Button>
+    <Button
+      onClick={() => (isSaved ? unsaveJob(job._id) : statusHandler(job._id))}
+      className="cursor-pointer bg-[#8760D4] hover:bg-[#926ae1] w-full sm:w-auto"
+    >
+      Save
+      {!isSaved ? <PlusIcon /> : <PanelRightDashedIcon />}
+    </Button>
+  </div>
+</div>
   );
 }
 
