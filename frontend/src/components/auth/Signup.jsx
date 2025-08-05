@@ -78,18 +78,23 @@ export default function Signup() {
     }
   }, []);
   return (
-    <div>
+    <div className="bg-[#1E1F29] min-h-screen text-white">
       <Navbar />
-      <div className="flex text-white items-center justify-center max-w-7xl px-8 sm:px-0 mx-auto">
+      <div className="flex text-white items-center justify-center max-w-7xl px-4 sm:px-0 mx-auto">
         <form
           onSubmit={submitHandler}
-          className="sm:w-1/2 bg-[#1e2126] border border-[#2f3848] rounded-md p-6 my-10 shadow-lg"
+          className="w-full sm:w-[500px] bg-[#282A36] border border-[#2f3848] rounded-2xl p-8 my-12 shadow-xl"
         >
-          <h1 className="font-bold text-2xl mb-6 text-white">Sign Up</h1>
-          <div className="my-4">
-            <Label className="text-gray-300">Full Name</Label>
+          <h1 className="font-bold text-3xl mb-6 text-center">Create Account</h1>
+          <p className="text-center text-gray-400 mb-8 text-sm">
+            Join us and start your journey today!
+          </p>
+
+          {/* Full Name */}
+          <div className="mb-5">
+            <Label className="text-gray-300 text-sm">Full Name</Label>
             <Input
-              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+              className="border-[#3a4557] mt-2 text-white bg-[#272934] rounded-md focus:border-[#6dd3db] focus:ring-1 focus:ring-[#6dd3db]"
               type="text"
               value={input.fullname}
               name="fullname"
@@ -97,10 +102,12 @@ export default function Signup() {
               placeholder="Enter your name"
             />
           </div>
-          <div className="my-4">
-            <Label className="text-gray-300">Email</Label>
+
+          {/* Email */}
+          <div className="mb-5">
+            <Label className="text-gray-300 text-sm">Email</Label>
             <Input
-              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+              className="border-[#3a4557] mt-2 text-white bg-[#272934] rounded-md focus:border-[#6dd3db] focus:ring-1 focus:ring-[#6dd3db]"
               type="email"
               value={input.email}
               name="email"
@@ -108,10 +115,12 @@ export default function Signup() {
               placeholder="Enter your email"
             />
           </div>
-          <div className="my-4">
-            <Label className="text-gray-300">Phone Number</Label>
+
+          {/* Phone Number */}
+          <div className="mb-5">
+            <Label className="text-gray-300 text-sm">Phone Number</Label>
             <Input
-              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+              className="border-[#3a4557] mt-2 text-white bg-[#272934] rounded-md focus:border-[#6dd3db] focus:ring-1 focus:ring-[#6dd3db]"
               type="text"
               value={input.phoneNumber}
               name="phoneNumber"
@@ -119,10 +128,12 @@ export default function Signup() {
               placeholder="Enter your phone number"
             />
           </div>
-          <div className="my-4">
-            <Label className="text-gray-300">Password</Label>
+
+          {/* Password */}
+          <div className="mb-5">
+            <Label className="text-gray-300 text-sm">Password</Label>
             <Input
-              className="border-[#3a4557] mt-1 text-white bg-[#2a2e36] focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+              className="border-[#3a4557] mt-2 text-white bg-[#272934] rounded-md focus:border-[#6dd3db] focus:ring-1 focus:ring-[#6dd3db]"
               type="password"
               value={input.password}
               name="password"
@@ -130,8 +141,11 @@ export default function Signup() {
               placeholder="Enter your password"
             />
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-between">
-            <RadioGroup className="flex items-center gap-10 sm:gap-4">
+
+          {/* Role & Profile Image */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+            {/* Role Selection */}
+            <RadioGroup className="flex items-center gap-8">
               <div className="flex items-center space-x-2">
                 <Input
                   type="radio"
@@ -139,7 +153,7 @@ export default function Signup() {
                   value="student"
                   checked={input.role === "student"}
                   onChange={changeEventHandler}
-                  className="cursor-pointer border-[#3a4557] text-purple-500"
+                  className="cursor-pointer border-[#3a4557] accent-[#6dd3db]"
                 />
                 <Label className="text-gray-300">Student</Label>
               </div>
@@ -150,43 +164,49 @@ export default function Signup() {
                   value="recruiter"
                   checked={input.role === "recruiter"}
                   onChange={changeEventHandler}
-                  className="cursor-pointer border-[#3a4557] text-purple-500"
+                  className="cursor-pointer border-[#3a4557] accent-[#6dd3db]"
                 />
                 <Label className="text-gray-300">Recruiter</Label>
               </div>
             </RadioGroup>
-            <div className="flex mt-2 sm:mt-0 items-center gap-2">
+
+            {/* Profile Image Upload */}
+            <div className="flex items-center gap-2 w-full sm:w-auto">
               <Label className="text-gray-300">Profile</Label>
               <Input
                 accept="image/*"
                 type="file"
                 onChange={changeFileHandler}
-                className="border-[#3a4557] cursor-pointer bg-[#2a2e36] text-white"
+                className="border-[#3a4557] cursor-pointer bg-[#272934] text-white rounded-md"
               />
             </div>
           </div>
+
+          {/* Submit Button */}
           {loading ? (
-            <Button className="w-full my-4 bg-gradient-to-r from-purple-700 to-purple-500 text-white">
+            <Button className="w-full my-4 bg-gradient-to-r from-[#6dd3db] to-[#6dd3db] text-black font-semibold py-2 rounded-lg">
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Please wait
             </Button>
           ) : (
             <Button
               type="submit"
-              className="w-full my-4 bg-[#6dd3db] hover:bg-[#6dd4dbe9] text-black font-semibold"
+              className="w-full my-4 bg-gradient-to-r from-[#6dd3db] to-[#6dd3db] hover:opacity-90 text-black font-semibold py-2 rounded-lg transition"
             >
               Sign Up
             </Button>
           )}
-          <span className="text-gray-300">
-            Already have an account?
+
+          {/* Login Redirect */}
+          <p className="text-gray-400 text-sm text-center mt-4">
+            Already have an account?{" "}
             <Link
               to="/login"
-              className="p-2 underline text-[#6dd3db] hover:text-[#5bbfc7]"
+              className="underline text-[#6dd3db] hover:text-[#5bbfc7] font-medium"
             >
-              Login
+              Log in
             </Link>
-          </span>
+          </p>
         </form>
       </div>
     </div>
