@@ -18,32 +18,42 @@ function HeroSection() {
     } else toast.error("Something is missing");
   };
   return (
-    <div className="text-center #262C36">
-      <div className="flex text-white flex-col gap-5 my-10 p-2 ">
-        <span className="bg-[#1e222ff1] mx-auto px-4 py-3 rounded-full  text-[#8980f0] ">
+   <div className=" text-white py-16 px-4">
+      <div className="max-w-4xl mx-auto text-center flex flex-col gap-6">
+     
+        <span className="bg-[#342a48cf] text-[#8760D4] px-4 py-2 rounded-full text-sm w-fit mx-auto font-medium shadow-md">
           The best way to shape your career
         </span>
-        <h1 className="text-4xl sm:text-5xl font-bold">
-          {" "}
-          Your Dream job
-          <br /> Starts <span className="text-[#655ef2]">Here</span>
+
+  
+        <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
+          Your Dream Job <br />
+          Starts <span className="text-[#8760D4]">Here</span>
         </h1>
-        <p className="p-3">
-          Discover thousands of opportunities tailored to your skills and
-          interests. Whether you're starting fresh or taking the next step, find
-          the job that aligns with your goals and passion. Let's build your
-          future—one application at a time.
+
+        <p className="text-gray-300 text-sm sm:text-base px-2 sm:px-10">
+          Discover thousands of opportunities tailored to your skills and interests.
+          Whether you're starting fresh or taking the next step, find the job
+          that aligns with your goals and passion. Let’s build your future—one
+          application at a time.
         </p>
-        <div className="flex justify-center">
-          <div className="flex w-full max-w-sm items-center space-x-3">
+
+
+        <div className="flex justify-center mt-4">
+          <div className="flex w-full max-w-md items-center gap-2 bg-[#1e1f29] border border-[#3d4046] rounded-md px-3 py-2 shadow-sm">
             <Input
-            className="border-[#3d4046]"
               onChange={(e) => setquery(e.target.value)}
+              value={query}
+              className="bg-transparent border-none focus:outline-none text-white placeholder:text-gray-400"
               type="text"
               placeholder="Find your dream jobs"
             />
-            <Button className=" hover:bg-[#6c28d9e1] bg-[#6D28D9] " onClick={submitHandler} type="text">
-              <Search />
+            <Button
+              onClick={submitHandler}
+              type="button"
+              className="bg-[#8760D4] hover:bg-[#926ae1] text-black font-semibold"
+            >
+              <Search className="h-5 w-5" />
             </Button>
           </div>
         </div>
