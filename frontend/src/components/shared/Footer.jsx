@@ -3,7 +3,7 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-[#151c29] text-white py-6">
+    <footer className="bg-[#282A36] text-white py-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} Next Hire. All rights reserved.
