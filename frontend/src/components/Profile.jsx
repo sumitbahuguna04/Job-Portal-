@@ -34,108 +34,114 @@ function Profile() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="text-white">
+      <div className="bg-[#1E1F29] min-h-screen text-white">
       <Navbar />
-      <div className=" ml-5 mt-5 flex gap-3 ">
+
+      {/* Top Buttons */}
+      <div className="flex gap-4 mt-8 px-6 justify-center">
         <Button
-          className=" text-white cursor-pointer border border-[#323d58] bg-[#030712] hover:bg-[#1F2937]"
-          ref={appliedRef}
+          className="px-6 py-2 rounded-xl text-white bg-[#2C2E3A] border border-[#3d4348] hover:bg-[#3A3C49] transition"
           onClick={() => scrollToSection(appliedRef)}
         >
           Applied Jobs
         </Button>
         <Button
-          className=" text-white cursor-pointer border border-[#323d58] bg-[#030712] hover:bg-[#1F2937]"
-          ref={savedRef}
+          className="px-6 py-2 rounded-xl text-white bg-[#2C2E3A] border border-[#3d4348] hover:bg-[#3A3C49] transition"
           onClick={() => scrollToSection(savedRef)}
         >
           Saved Jobs
         </Button>
       </div>
 
-      <div className="max-w-4xl  mx-3 sm:mx-5 md:mx-7 lg:mx-auto rounded-2xl bg-[#24282c] border border-[#31353b] my-5 p-8 mt-10">
-        <div className="flex justify-between">
+      {/* Profile Card */}
+      <div className="max-w-4xl mx-4 md:mx-auto rounded-2xl bg-[#282A36] border border-[#31353b] my-8 p-8 shadow-lg">
+        <div className="flex justify-between items-start">
+          {/* Avatar + Info */}
           <div className="flex items-center">
-            <Avatar className="h-23 cursor-pointer w-23">
+            <Avatar className="h-24 w-24 border-2 border-[#3d4348]">
               <AvatarImage src={user?.profile?.profilePhoto} />
             </Avatar>
-            <div className="pl-8">
-              <h1 className="font-medium text-xl">{user?.fullname}</h1>
-              <p>{user?.profile?.bio}</p>
+            <div className="pl-6">
+              <h1 className="font-semibold text-2xl">{user?.fullname}</h1>
+              <p className="text-gray-400 text-sm mt-1">{user?.profile?.bio}</p>
             </div>
           </div>
+
+          {/* Edit Button */}
           <UpdateProfile open={open} setOpen={setOpen} />
           <Button
             onClick={() => setOpen(true)}
-            className="text-right cursor-pointer  bg-[#2a2e33]  border-[#40444a]"
+            className="cursor-pointer rounded-full bg-[#2C2E3A] border border-[#40444a] hover:bg-[#3A3C49] transition"
             variant="outline"
           >
-            <Pen />
+            <Pen size={18} />
           </Button>
         </div>
 
-        {/* Contact Details */}
-        <div className="flex item-center gap-3 my-2">
-          <Mail />
-          <span>{user?.email}</span>
-        </div>
-        <div className="mt-2 flex items-center gap-3 my-2">
-          <Contact />
-          <span>{user?.phoneNumber}</span>
+        {/* Contact Info */}
+        <div className="mt-6 space-y-3">
+          <div className="flex items-center gap-3 text-gray-300">
+            <Mail size={18} />
+            <span>{user?.email}</span>
+          </div>
+          <div className="flex items-center gap-3 text-gray-300">
+            <Contact size={18} />
+            <span>{user?.phoneNumber}</span>
+          </div>
         </div>
 
-        {/* Skills Section */}
-        <div className="my-5">
-          <h1>Skills</h1>
-          <div className="flex h-7 gap-2 mt-1">
+        {/* Skills */}
+        <div className="my-6">
+          <h2 className="text-lg font-semibold mb-3">Skills</h2>
+          <div className="flex flex-wrap gap-2">
             {user?.profile?.skills.length !== 0 ? (
               user?.profile?.skills.map((val, key) => (
                 <Badge
-                  className="bg-[#fff] text-black font-bold rounded-2xl"
+                  className="bg-[#3A3C49] text-white font-medium px-3 py-1 rounded-xl hover:bg-[#4A4C5B] transition"
                   key={key}
                 >
                   {valToCaptital(val)}
                 </Badge>
               ))
             ) : (
-              <span>No Skills</span>
+              <span className="text-gray-400">No Skills</span>
             )}
           </div>
         </div>
 
-        {/* Resume Section */}
-        <div className="grid w-full max-w-sm gap-1.5">
-          <Label className="text-md font-bold">Resume</Label>
+        {/* Resume */}
+        <div className="mt-6">
+          <Label className="text-md font-semibold">Resume</Label>
           {isResume ? (
             <a
-              target="blank"
+              target="_blank"
               href={user?.profile?.resume}
               rel="noreferrer"
-              className="text-blue-500 w-full hover:underline cursor-pointer"
+              className="block text-blue-400 hover:text-blue-500 mt-1 transition"
             >
               {user?.profile?.resumeOriginalName}
             </a>
           ) : (
-            <span>NA</span>
+            <span className="text-gray-400">NA</span>
           )}
         </div>
       </div>
 
-      {/* Applied Jobs Section */}
+      {/* Applied Jobs */}
       <div
         ref={appliedRef}
-        className="bg-[#24282c] border border-[#31353b] max-w-4xl  mx-3 sm:mx-5 md:mx-7 lg:mx-auto rounded-2xl my-5 p-8 mb-10 mt-10"
+        className="bg-[#282A36] border border-[#31353b]   max-w-4xl mx-4 md:mx-auto rounded-2xl my-8 p-8 shadow-md"
       >
-        <h1 className="font-medium text-xl">Applied Jobs</h1>
+        <h1 className="font-semibold text-xl mb-4">Applied Jobs</h1>
         <Appliedjobs />
       </div>
 
-      {/* Saved Jobs Section */}
+      {/* Saved Jobs */}
       <div
         ref={savedRef}
-        className="bg-[#24282c] border  border-[#31353b] max-w-4xl  mx-3 sm:mx-5 md:mx-7 lg:mx-auto rounded-2xl  my-5 p-8 mb-10 mt-10"
+        className="bg-[#282A36] border border-[#31353b] max-w-4xl mx-4 md:mx-auto rounded-2xl my-8 p-8 shadow-md"
       >
-        <h1 className="font-medium text-xl">Saved Jobs</h1>
+        <h1 className="font-semibold text-xl mb-4">Saved Jobs</h1>
         <SavedJobs />
       </div>
 
