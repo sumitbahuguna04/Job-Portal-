@@ -32,15 +32,15 @@ function Jobs() {
     <div>
       <div>
         <Navbar />
-        <div className=" max-w-7xl  mt-5">
-          <div className="flex gap-5">
-            <div className="ml-10 w-[20%]">
+        <div className=" max-w-7xl p-2 sm:p-0 mt-5">
+          <div className="flex flex-col sm:flex-row sm:gap-5">
+            <div className="mx-2 sm:mx-10  sm:w-[10%] md:w-[30%] lg:w-[20%]">
               <FilterCard />
             </div>
             {filterjobs.length <= 0 ? (
               <span className="text-white">No job found !</span>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-2">
+              <div className="grid mt-10 sm:mt-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-2">
               {filterjobs.map((job) => (
                 <div key={job._id} className="h-full">
                   <Job job={job} />
