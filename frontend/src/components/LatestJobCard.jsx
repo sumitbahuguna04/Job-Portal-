@@ -15,7 +15,7 @@ function LatestJobCard({ job }) {
   return (
     <div
       onClick={() => navigate(`/description/${job._id}`)}
-      className="w-full  bg-[#1a1d21] border border-[#3a3e46] cursor-default shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300 text-white p-5 "
+      className="w-full  bg-[#272834b7] border border-[#4546556c] cursor-default shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300 text-white p-5 "
     >
       <div className="flex items-center justify-between text-sm text-gray-400">
         <p>
