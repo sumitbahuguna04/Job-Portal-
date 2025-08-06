@@ -80,93 +80,68 @@ function CompanySetup() {
   }, [singleCompany]);
 
   return (
-    <div className="text-white">
+     <div className="text-white">
       <Navbar />
-      <div className=" max-w-2xl mb-10 sm:mb-0  mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-4 p-4 sm:p-8">
+      <div className="max-w-3xl mx-auto my-8 px-5">
+       
+        <div className="flex items-center gap-4 mb-6">
           <Button
             onClick={() => navigate("/admin/companies")}
-            className="text-gray-500 cursor-pointer hover:bg-[#2b313d] hover:text-gray-200"
+            className="bg-[#1f202c] hover:bg-[#2b2d3a] text-gray-300"
           >
-            <ArrowLeft />
-            <span className="ml-2">Back</span>
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back
           </Button>
-          <h1 className="text-lg sm:text-xl pl-[5%] font-semibold">
-            Company Setup
-          </h1>
+          <h1 className="text-2xl font-bold">Edit Company</h1>
         </div>
 
-        <div className="bg-[#030712] border border-[#2b384a]  p-4 sm:p-8  rounded-md ">
-          <form onSubmit={submitHandler}>
-            <div className="grid gap-4">
-              <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-2 sm:gap-4">
-                <Label className="text-left sm:text-right">Company Name</Label>
-                <Input
-                  name="name"
-                  value={input.name}
-                  onChange={changeEventHandler}
-                  className="sm:col-span-3 w-full border-[#2b384a]"
-                />
-              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-2 sm:gap-4">
-                <Label className="text-left sm:text-right">Description</Label>
+        <div className="bg-[#282A36] border border-[#31353b]  rounded-xl p-6 shadow-lg">
+          <form onSubmit={submitHandler} className="space-y-5">
+            {[
+              { label: "Company Name", name: "name" },
+              { label: "Description", name: "description", placeholder: "Enter company description" },
+              { label: "Website", name: "website", placeholder: "Enter company website" },
+              { label: "Location", name: "location", placeholder: "Enter company location" },
+            ].map((field, idx) => (
+              <div
+                key={idx}
+                className="grid grid-cols-1 sm:grid-cols-4 items-center gap-2 sm:gap-4"
+              >
+                <Label className="text-left ">{field.label}</Label>
                 <Input
-                  name="description"
-                  value={input.description}
+                  name={field.name}
+                  value={input[field.name]}
                   onChange={changeEventHandler}
-                  placeholder="Enter your description"
-                  className="sm:col-span-3 w-full border-[#2b384a]"
+                  placeholder={field.placeholder || ""}
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47] text-white placeholder:text-gray-400"
                 />
               </div>
+            ))}
 
-              <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-2 sm:gap-4">
-                <Label className="text-left sm:text-right">Website</Label>
-                <Input
-                  name="website"
-                  value={input.website}
-                  onChange={changeEventHandler}
-                  placeholder="Enter your website"
-                  className="sm:col-span-3 w-full border-[#2b384a]"
-                />
-              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-2 sm:gap-4">
-                <Label className="text-left sm:text-right">Location</Label>
-                <Input
-                  name="location"
-                  onChange={changeEventHandler}
-                  value={input.location}
-                  placeholder="Enter your location"
-                  className="sm:col-span-3 w-full border-[#2b384a]"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-2 sm:gap-4">
-                <Label className="text-left sm:text-right" htmlFor="file">
-                  Logo
-                </Label>
-                <Input
-                  type="file"
-                  onChange={changeFileHandler}
-                  accept="image/*"
-                  className="sm:col-span-3 w-full border-[#2b384a] cursor-pointer"
-                />
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-2 sm:gap-4">
+              <Label className="text-left ">Logo</Label>
+              <Input
+                type="file"
+                onChange={changeFileHandler}
+                accept="image/*"
+                className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47] text-white cursor-pointer"
+              />
             </div>
 
-            <DialogFooter className="mt-6">
+            <DialogFooter className="pt-4">
               {loading ? (
-                <Button className="w-full text-black bg-[#ffffffce] ">
+                <Button className="w-full bg-[#8760D4] text-white">
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   Please wait
                 </Button>
               ) : (
                 <Button
                   type="submit"
-                  className="bg-[#6225C5] hover:bg-[#6225c5d4] w-full cursor-pointer"
+                  className="w-full bg-[#8760D4] hover:bg-[#926ae1] text-white"
                 >
-                 Save
+                  Save Changes
                 </Button>
               )}
             </DialogFooter>
