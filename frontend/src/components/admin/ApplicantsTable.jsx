@@ -61,7 +61,7 @@ const ApplicantsTable = () => {
   };
 
   return (
-    <div className="rounded-2xl p-5 bg-[#030712] border border-[#2b384a]">
+  <div className="rounded-2xl  p-5 bg-[#282A36] border border-[#31353b] ">
       <Table>
         <TableCaption className="text-gray-400">
           A list of your recent applied users
@@ -105,11 +105,11 @@ const ApplicantsTable = () => {
                     <PopoverTrigger>
                       <MoreHorizontal className="cursor-pointer" />
                     </PopoverTrigger>
-                    <PopoverContent className="flex flex-col text-center bg-[#161d26] border-[#2b384a] border w-32 p-1">
+                    <PopoverContent className="flex flex-col text-center bg-[#282935] border-[#40414c] border w-32 p-1">
   {shortlistingStatus.map((status) => (
     <div
       key={status}
-      className=" rounded-2xl hover:bg-[#2b384a] cursor-pointer"
+      className=" rounded-2xl hover:bg-[#353645] cursor-pointer"
     >
       <Button
         onClick={() => submitHandler(status, item._id)}
