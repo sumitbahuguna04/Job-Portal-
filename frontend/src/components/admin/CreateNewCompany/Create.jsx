@@ -40,10 +40,10 @@ function Create() {
     }
   };
   return (
-    <div className="text-white">
+  <div className="text-white">
       <Navbar />
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl px-4 py-2 mx-auto">
         <div className="my-10">
           <h1 className="font-bold text-2xl">Your Company Name</h1>
           <p className="text-gray-500">
@@ -55,7 +55,7 @@ function Create() {
         <Input
           onChange={(e) => setCompanyName(e.target.value)}
           type={"text"}
-          className={`my-2`}
+          className={`my-2 border border-gray-600`}
           placeholder="JobHunt, microsoft etc."
         />
         <div className="flex items-center gap-2 my-10 ">
@@ -68,7 +68,7 @@ function Create() {
           </Button>
           <Button
             onClick={registerNewCompany}
-            className="border bg-[#2ba429] border-gray-300  cursor-pointer"
+            className=" bg-[#2ba429] hover:bg-[#35b533]  cursor-pointer"
           >
             Continue
           </Button>
