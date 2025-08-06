@@ -70,7 +70,7 @@ function Job({ job }) {
   };
 
   return (
- <div className="w-full max-w-[600px] mx-auto text-white p-4 sm:p-5 rounded-md shadow-xl bg-[#22232e] border border-[#3d4046] flex flex-col justify-between min-h-[330px]">
+<div className="w-full max-w-[600px] mx-auto text-white p-4 sm:p-5 rounded-md shadow-xl bg-[#22232e] border border-[#3d4046] flex flex-col justify-between min-h-[330px]">
   
   <div>
     <div className="flex flex-row items-start sm:items-center justify-between gap-2">
@@ -142,6 +142,8 @@ function Job({ job }) {
     </Button>
   </div>
 </div>
+
+
   );
 }
 
