@@ -71,7 +71,7 @@ function AdminCreateJob() {
   };
 
   return (
-    <div className="min-h-screen text-white">
+     <div className="min-h-screen text-white">
       <Navbar />
       <div className="max-w-3xl mx-auto px-6 py-10">
         <div className="flex items-center mb-6 gap-4">
@@ -86,18 +86,17 @@ function AdminCreateJob() {
           <h1 className="text-2xl  font-bold">Create New Job</h1>
         </div>
 
-        <div className="p-6 rounded-xl bg-[#030712] border border-[#2b384a] shadow-lg">
+        <div className="p-6 rounded-xl bg-[#282A36] border border-[#31353b] shadow-lg">
           <form onSubmit={submitHandler}>
             <div className="space-y-5">
-              {/* Job Details Section */}
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-left sm:text-right">Job Title</Label>
+                <Label className="text-left  sm:text-right">Job Title</Label>
                 <Input
                   name="title"
                   value={input.title}
                   onChange={changeEventHandler}
                   placeholder="Enter job title"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
@@ -108,7 +107,7 @@ function AdminCreateJob() {
                   value={input.description}
                   onChange={changeEventHandler}
                   placeholder="Enter job description"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
@@ -120,7 +119,7 @@ function AdminCreateJob() {
                   value={input.requirements}
                   onChange={changeEventHandler}
                   placeholder="Enter job requirements"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
@@ -132,7 +131,7 @@ function AdminCreateJob() {
                   value={input.salary}
                   onChange={changeEventHandler}
                   placeholder="e.g. 3 Lpa "
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
@@ -143,11 +142,10 @@ function AdminCreateJob() {
                   value={input.location}
                   onChange={changeEventHandler}
                   placeholder="e.g. Bengaluru"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
-              {/* Job Type and Experience */}
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
                 <Label className="text-left sm:text-right">Job Type</Label>
                 <Input
@@ -155,47 +153,50 @@ function AdminCreateJob() {
                   value={input.jobType}
                   onChange={changeEventHandler}
                   placeholder="e.g. Full-time"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-left sm:text-right">Experience Level</Label>
+                <Label className="text-left sm:text-right">
+                  Experience Level
+                </Label>
                 <Input
                   name="experience"
                   type="number"
                   value={input.experience}
                   onChange={changeEventHandler}
                   placeholder="e.g. 2-3 years"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-left sm:text-right">No. of Positions</Label>
+                <Label className="text-left sm:text-right">
+                  No. of Positions
+                </Label>
                 <Input
                   name="position"
                   type="number"
                   value={input.position}
                   onChange={changeEventHandler}
                   placeholder="e.g. 2"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
-              {/* Company Dropdown */}
               {companies.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4 ">
                   <Label className=" text-left sm:text-right">Company</Label>
                   <Select onValueChange={selectChangeHandler}>
-                    <SelectTrigger className="sm:col-span-3  border w-[180px] border-[#2b384a]">
+                    <SelectTrigger className="sm:col-span-3   w-[180px] bg-[#2f303a] border border-[#3c3d47]">
                       <SelectValue placeholder="Select a Company" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1b2133]   text-white border border-gray-500">
+                    <SelectContent className="bg-[#2f303a]   text-white border border-[#494a53]">
                       <SelectGroup className="">
                         {companies.map((company) => (
                           <SelectItem
-                            className="hover:bg-[#2f3958]  cursor-pointer"
+                            className="hover:bg-[#3a3b46]  cursor-pointer"
                             key={company._id}
                             value={company.name.toLowerCase()}
                           >
@@ -211,14 +212,14 @@ function AdminCreateJob() {
 
             <DialogFooter className="mt-8">
               {loading ? (
-                <Button className="w-full bg-[#ffffffce]">
+                <Button className="w-full bg-[#8760D4] text-white">
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Please wait...
+                  Please wait
                 </Button>
               ) : (
                 <Button
                   type="submit"
-                  className="w-full cursor-pointer bg-[#6225C5] hover:bg-[#6225c5d4]"
+                  className="w-full bg-[#8760D4] hover:bg-[#926ae1] text-white"
                 >
                   Post Job
                 </Button>
