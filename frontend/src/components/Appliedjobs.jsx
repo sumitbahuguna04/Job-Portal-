@@ -17,7 +17,7 @@ function Appliedjobs() {
   };
   const { allAppliedJobs } = useSelector((store) => store.job);
   return (
-    <div className="mt-5 ">
+   <div className="mt-5 ">
       <div className="m-5">
         <Table className="">
           <TableCaption className="text-gray-400">
@@ -33,7 +33,7 @@ function Appliedjobs() {
           </TableHeader>
           <TableBody>
             {allAppliedJobs.map((val) => (
-              <TableRow className=" hover:bg-[#1F2937]" key={val._id}>
+              <TableRow className=" hover:bg-[#323443]" key={val._id}>
                 <TableCell>
                   {" "}
                   {new Date(val?.createdAt).toLocaleDateString()}
@@ -44,11 +44,11 @@ function Appliedjobs() {
                   <Badge
                     className={`w-17  ${
                       val?.status === "accepted"
-                        ? "text-[#0de085] bg-[#0d391ba1]"
-                        : "text-[#f22828] bg-[#39190da1]"
+                        ? "text-[#0de085] bg-[#0d391ba1] border border-[#3d8b60]"
+                        : "text-[#f22828] bg-[#39190da1]  border border-[#8b3d3d]"
                     } ${
                       val?.status === "pending"
-                        ? "text-gray-400 bg-[#1e2637]"
+                        ? " text-[#b1aff1] bg-[#454962] border border-[#9eb1f0]"
                         : ""
                     }`}
                   >
