@@ -18,7 +18,7 @@ function Applicant() {
   return (
     <div className="text-white">
       <Navbar />
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h1 className="font-bold text-xl my-5">
           Applicants {allapplicants?.length}
         </h1>
