@@ -67,111 +67,93 @@ function Jobdescription() {
   return (
     <div>
       <Navbar />
-    <div className="p-4 sm:p-0">  <div className="mt-10 lg:max-w-4xl sm:max-w-2xl rounded-2xl mx-auto bg-[#030712] border border-[#2b384a]">
-        <div className="p-5 sm:p-10 text-white">
-          <div className="flex flex-col sm:flex-row  sm:items-center justify-between">
-            <div className="rounded-2xl sm:p-3">
-              <h1 className="font-bold text-xl">{singleJob?.title}</h1>
-              <div className="flex items-center gap-3 mt-4 text-black">
-                 <Badge className="font-bold text-[#51A2FF] bg-[#16263E] border border-[#274C79] ">
-                         {`${singleJob?.position} Positions`}
-                       </Badge>
-                       <Badge className="font-bold text-[#F0B100] bg-[#272A24] border border-[#524A1D] ">
-                         {singleJob?.jobType}
-                       </Badge>
-                       <Badge className="font-bold text-[#0de045c8] bg-[#0E2A2C] border border-[#0B4A33]">
-                         {`${singleJob?.salary} LPA`}
-                       </Badge>
+      <div className="p-4 sm:p-6">
+        <div className="mt-10 max-w-5xl mx-auto rounded-2xl bg-[#282A36] border border-[#3d4046] shadow-lg">
+          <div className="p-6 sm:p-10 text-white space-y-6">
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h1 className="font-bold text-2xl sm:text-3xl">{singleJob?.title}</h1>
+                <div className="flex flex-wrap items-center gap-3 mt-4">
+ <Badge className="font-bold text-[#51A2FF] bg-[#16263E] border border-[#274C79]">
+                    {`${singleJob?.position} Positions`}
+                  </Badge>
+                  <Badge className="font-bold text-[#F0B100] bg-[#272A24] border border-[#524A1D]">
+                    {singleJob?.jobType}
+                  </Badge>
+                  <Badge className="font-bold text-[#0de045c8] bg-[#0E2A2C] border border-[#0B4A33]">
+                    {`${singleJob?.salary} LPA`}
+                  </Badge>
+                </div>
               </div>
+
+              {singleJob && (
+                <Button
+                  onClick={isApplied ? null : applyJobHandler}
+                  className={`px-6 py-3 rounded-lg text-lg ${
+                    isApplied
+                      ? "bg-[#2a2d37] text-gray-400 cursor-not-allowed"
+                      : "bg-[#8760D4] hover:bg-[#926ae1] cursor-pointer"
+                  }`}
+                >
+                  {isApplied ? "Already Applied" : "Apply Now"}
+                </Button>
+              )}
             </div>
 
-            {singleJob && (
-              <Button
-                onClick={isApplied ? null : applyJobHandler}
-                className={`rounded-lg ${
-                  isApplied
-                    ? "bg-[#1f2937d3] mt-3 text-gray-300 cursor-not-allowed"
-                    : "bg-[#6225C5] mt-3 hover:bg-[#6225c5cf] cursor-pointer"
-                }`}
-              >
-                {isApplied ? "Already Applied" : "Apply Now"}
-              </Button>
-            )}
-          </div>
+           
+            <div>
+              <h2 className="text-xl font-semibold border-b border-[#3d404e] pb-3">
+                Job Overview
+              </h2>
+              <p className="text-gray-300 mt-4">{singleJob?.description}</p>
+            </div>
 
-          <h1 className="pl-2 text-gray-00 border-b-2 border-b-[#1F2937] font-medium py-4">
-            {singleJob?.description}
-          </h1>
-
-          <div className="mt-4 p-3 rounded-2xl bg-[#1F2937]">
-            <h1 className="font-medium my-1">
-              Company:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.company?.name}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Role:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.title}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Requirments:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.requirements?.map((val, ind) => (
-                  <span key={ind}>
-                    {val}
-                    {ind !== singleJob.requirements.length - 1 ? ", " : ""}
-                  </span>
-                ))}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Location:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.location}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Job Type:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.jobType}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Description:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.description}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Experience:
-              <span className="pl-2 font-normal text-white">
-                {`${singleJob?.experience || 0}`}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Salary:
-              <span className="pl-2 font-normal text-white">
-                {`${singleJob?.salary} LPA`}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Applied Candidates:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.applications?.length}
-              </span>
-            </h1>
-            <h1 className="font-medium my-1">
-              Posted Date:
-              <span className="pl-2 font-normal text-white">
-                {singleJob?.createdAt?.split("T")[0]}
-              </span>
-            </h1>
+           
+            <div className="grid sm:grid-cols-2 gap-6 p-5 rounded-2xl bg-[#31323fd6]">
+              <div>
+                <h3 className="font-medium text-gray-400">Company</h3>
+                <p className="text-white">{singleJob?.company?.name}</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-400">Role</h3>
+                <p className="text-white">{singleJob?.title}</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-400">Requirements</h3>
+                <p className="text-white">
+                  {singleJob?.requirements?.map((val, ind) => (
+                    <span key={ind}>
+                      {val}
+                      {ind !== singleJob.requirements.length - 1 ? ", " : ""}
+                    </span>
+                  ))}
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-400">Location</h3>
+                <p className="text-white">{singleJob?.location}</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-400">Experience</h3>
+                <p className="text-white">{`${singleJob?.experience || 0} Years`}</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-400">Salary</h3>
+                <p className="text-white">{`${singleJob?.salary} LPA`}</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-400">Applied Candidates</h3>
+                <p className="text-white">{singleJob?.applications?.length}</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-400">Posted Date</h3>
+                <p className="text-white">{singleJob?.createdAt?.split("T")[0]}</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div></div>
+      </div>
     </div>
   );
 }
