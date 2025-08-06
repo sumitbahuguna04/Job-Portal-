@@ -45,49 +45,58 @@ function CompaniesTable() {
   }, [companies, seachbycompany]);
 
   return (
-    <div className="rounded-2xl p-5 mt-10 bg-[#030712] border border-[#2b384a]">
+   <div className="rounded-xl p-5 bg-[#282A36] border border-[#31353b]  shadow-lg">
       <Table className="min-w-[700px]">
-        <TableCaption className={"text-gray-400"}>
+        <TableCaption className="text-gray-400">
           A list of your recently registered companies
         </TableCaption>
-        <TableHeader className="text-gray-400">
-          <TableRow>
-            <TableHead>Company Logo</TableHead>
-            <TableHead>Name</TableHead>
-            <TableHead>Listed Date</TableHead>
-            <TableHead className="text-right">Action</TableHead>
+
+     
+        <TableHeader>
+          <TableRow className="border-b border-[#3d4046]">
+            <TableHead className="text-gray-300">Logo</TableHead>
+            <TableHead className="text-gray-300">Name</TableHead>
+            <TableHead className="text-gray-300">Listed Date</TableHead>
+            <TableHead className="text-right text-gray-300">Action</TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="">
+
+       
+        <TableBody>
           {filterCompany && filterCompany.length > 0 ? (
             filterCompany.map((company) => (
-              <TableRow className="" key={company._id}>
+              <TableRow
+                key={company._id}
+                className="hover:bg-[#323443] transition duration-200"
+              >
                 <TableCell>
                   <Avatar>
                     <AvatarImage
                       src={company?.logo || "https://via.placeholder.com/40"}
-                      className="w-12 h-12  rounded-4xl object-cover"
+                      className="w-12 h-12 rounded-full object-cover"
                     />
                   </Avatar>
                 </TableCell>
-                <TableCell>{company.name}</TableCell>
-                <TableCell>
+                <TableCell className="font-medium text-white">
+                  {company.name}
+                </TableCell>
+                <TableCell className="text-gray-400">
                   {new Date(company.createdAt).toLocaleDateString()}
                 </TableCell>
-                <TableCell className="text-right cursor-pointer">
+                <TableCell className="text-right">
                   <Popover>
                     <PopoverTrigger>
-                      <MoreHorizontal className="cursor-pointer" />
+                      <MoreHorizontal className="cursor-pointer text-gray-300 hover:text-white" />
                     </PopoverTrigger>
-                    <PopoverContent className="bg-[#282a30]  border  border-[#42454b]  w-30 h-14  rounded-md">
+                    <PopoverContent className="bg-[#2a2b37] border border-[#42454b] w-32 mx-2 sm:mx-1 p-2 rounded-md">
                       <Button
                         onClick={() =>
                           navigate(`/admin/comapnies/${company._id}`)
                         }
-                        className="flex hover:underline items-center cursor-pointer gap-2 w-fit pl-3 pt-2"
+                        className="flex items-center gap-2 w-full text-sm text-white bg-[#8760D4] hover:bg-[#926ae1] transition rounded-md py-2"
                       >
                         <Edit2 className="w-4" />
-                        <span>Edit</span>
+                        Edit
                       </Button>
                     </PopoverContent>
                   </Popover>
@@ -95,8 +104,11 @@ function CompaniesTable() {
               </TableRow>
             ))
           ) : (
-            <TableRow className="border border-gray-500">
-              <TableCell colSpan={4} className="text-center">
+            <TableRow>
+              <TableCell
+                colSpan={4}
+                className="text-center text-gray-400 py-6"
+              >
                 No companies found.
               </TableCell>
             </TableRow>
