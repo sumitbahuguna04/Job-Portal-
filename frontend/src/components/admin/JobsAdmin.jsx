@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import AdminJobsTable from "./AdminJobsTable";
 import { setSearchJobByText } from "@/redux/jobSlice";
-import { BellIcon, EditIcon, PiIcon } from "lucide-react";
+import { PenBoxIcon } from "lucide-react";
+
 
 function JobsAdmin() {
   const navigate = useNavigate();
