@@ -83,7 +83,7 @@ function UpdateProfile({ open, setOpen }) {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger></DialogTrigger>
         <DialogContent
-          className="bg-[#26292f] border-1 border-[#41444c] text-white"
+          className="bg-[#272835] border border-[#414352] text-white"
           onInteractOutside={() => setOpen(false)}
         >
           <DialogHeader className=" items-center">
