@@ -44,8 +44,8 @@ function AdminJobsTable() {
   }, [allAdminJobs, searchJobByText]);
 
   return (
-    <div className="overflow-x-auto my-10">
-      <div className="rounded-2xl p-5 bg-[#030712] border border-[#2b384a] ">
+    <div className="overflow-x-auto ">
+      <div className="rounded-2xl p-5  bg-[#282A36] border border-[#31353b]">
         <Table className="min-w-[700px] ">
           <TableCaption className={"text-gray-400"}>
             A list of your recently posted jobs
