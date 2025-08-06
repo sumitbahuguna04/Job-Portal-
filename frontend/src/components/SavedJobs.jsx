@@ -48,11 +48,12 @@ function SavedJobs() {
                 <TableCell>{job.location}</TableCell>
                 <TableCell>{job.salary} LPA</TableCell>
                 <TableCell className="text-center">
-                  <Button 
-                    onClick={() => navigate(`/description/${job._id}`)}
-                    className=" border border-[#222f3e] hover:bg-[#1F2937] hover:border-[#1F2937] text-white  shadow-x shadow-[#1b1c20cf]  transition rounded-xl cursor-pointer duration-200">
-                    View Details
-                  </Button>
+                 <Button
+                      onClick={() => navigate(`/description/${job._id}`)}
+                      className="bg-[#353745] border border-[#545667] text-[#fff] hover:bg-[#424454]  shadow-x shadow-[#1b1c20cf]  transition rounded-xl cursor-pointer duration-200"
+                    >
+                      View Details
+                    </Button>
                 </TableCell>
               </TableRow>
             ))
