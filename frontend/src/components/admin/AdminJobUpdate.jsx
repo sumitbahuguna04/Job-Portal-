@@ -45,7 +45,7 @@ function AdminJobUpdate() {
         {
           title: input.title,
           description: input.description,
-          requirements: input.requirements, // make sure this is a string or an array
+          requirements: input.requirements, 
           salary: input.salary,
           location: input.location,
           jobType: input.jobType,
@@ -87,126 +87,126 @@ function AdminJobUpdate() {
   }, [singleJob]);
 
   return (
-    <div className="min-h-screen text-white">
+  <div className="min-h-screen text-white">
       <Navbar />
       <div className="max-w-3xl mx-auto px-6 py-10">
-        <div className="flex items-center mb-6 gap-4">
+        <div className="flex items-center mb-6 gap-7 sm:gap-20 ">
           <Button
             onClick={() => navigate("/admin/comapnies/jobs")}
- className="text-gray-500 cursor-pointer hover:bg-[#313339] hover:text-gray-200"            variant="ghost"
+            className="text-gray-500 cursor-pointer  hover:bg-[#2b2d3a] hover:text-gray-200"
+            variant="ghost"
           >
             <ArrowLeft className="h-5 w-5" />
             <span className="ml-2">Back</span>
           </Button>
-          <h1 className="text-2xl  font-bold">Update The Job</h1>
+          <h1 className="text-2xl font-bold">Update The Job</h1>
         </div>
 
-        <div className="p-6 rounded-xl bg-[#030712] border border-[#2b384a] shadow-lg">
+        <div className="p-6 rounded-xl bg-[#282A36] border border-[#31353b]  shadow-lg">
           <form onSubmit={submitHandler}>
             <div className="space-y-5">
-              {/* Job Details Section */}
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Job Title</Label>
+                <Label className="">Job Title</Label>
                 <Input
                   name="title"
-                  value={input.title}
+                  value={input?.title}
                   onChange={changeEventHandler}
                   placeholder="Enter job title"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Description</Label>
+                <Label className="">Description</Label>
                 <Input
                   name="description"
                   value={input.description}
                   onChange={changeEventHandler}
                   placeholder="Enter job description"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Requirements</Label>
+                <Label className="">Requirements</Label>
                 <Input
                   name="requirements"
                   value={input.requirements}
                   onChange={changeEventHandler}
                   placeholder="Enter job requirements"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Salary</Label>
+                <Label className="">Salary</Label>
                 <Input
                   name="salary"
                   value={input.salary}
                   onChange={changeEventHandler}
                   placeholder="e.g. 3 Lpa "
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Location</Label>
+                <Label className="">Location</Label>
                 <Input
                   name="location"
                   value={input.location}
                   onChange={changeEventHandler}
                   placeholder="e.g. Bengaluru"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
-              {/* Job Type and experience */}
+           
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Job Type</Label>
+                <Label className="">Job Type</Label>
                 <Input
                   name="jobType"
                   value={input.jobType}
                   onChange={changeEventHandler}
                   placeholder="e.g. Full-time"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">Experience</Label>
+                <Label className="">Experience</Label>
                 <Input
                   name="experience"
                   value={input.experience}
                   onChange={changeEventHandler}
                   placeholder="e.g. 2-3 years"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 items-center gap-4">
-                <Label className="text-right">No. of Positions</Label>
+                <Label className="">No. of Positions</Label>
                 <Input
                   name="position"
                   value={input.position}
                   onChange={changeEventHandler}
                   placeholder="e.g. 2"
-                  className="sm:col-span-3 border-[#2b384a]"
+                  className="sm:col-span-3 bg-[#2f303a] border border-[#3c3d47]"
                 />
               </div>
             </div>
 
             <DialogFooter className="mt-8">
               {loading ? (
-                <Button className="w-full bg-[#6225c5d4] ">
+                <Button className="w-full bg-[#8760D4] text-white">
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Please wait...
+                  Please wait
                 </Button>
               ) : (
                 <Button
                   type="submit"
-                  className="w-full cursor-pointer  bg-[#6225C5] hover:bg-[#6225c5d4] "
+                  className="w-full bg-[#8760D4] hover:bg-[#926ae1] text-white"
                 >
-                  Update Job
+                  Save Changes
                 </Button>
               )}
             </DialogFooter>
