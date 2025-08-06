@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSearchbycompany } from "@/redux/companySlice";
 import { ComputerIcon } from "lucide-react";
+import { Building2 } from "lucide-react";
 
 function Companies() {
   const navigate = useNavigate();
