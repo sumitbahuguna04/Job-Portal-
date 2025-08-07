@@ -15,13 +15,13 @@ HomePage :
 
 Login Page: 
 
-
 <img width="1920" height="1080" alt="Screenshot (123)" src="https://github.com/user-attachments/assets/a81f40b5-7cd9-4e4f-ac77-05e31a84c8bd" />
 
 
 Singup Page:
 
 <img width="1920" height="1080" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/8af596e8-2479-40dc-bdc7-008c2643017b" />
+
 
 Listed Jobs Page: 
 
@@ -30,6 +30,7 @@ Listed Jobs Page:
 
 
 User Profile Page:
+
 <img width="1920" height="1080" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/277ba0da-053c-4a0e-97a0-cb2889351649" />
 
 
