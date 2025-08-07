@@ -31,7 +31,7 @@ Listed Jobs Page:
 
 User Profile Page:
 
-<img width="1920" height="1080" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/277ba0da-053c-4a0e-97a0-cb2889351649" />
+<img width="1920" height="1080" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/b41bac7d-a4fb-4155-9513-df5074232f93" />
 
 
 
