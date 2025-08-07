@@ -10,7 +10,8 @@ https://job-portal-frontend-rsnu.onrender.com/
 
 HomePage : 
 
-![Screenshot (68)](https://github.com/user-attachments/assets/09e0c73a-5f4f-4745-8312-bfbb4ac05a3b)
+<img width="1920" height="1080" alt="Screenshot (122)" src="https://github.com/user-attachments/assets/a74ab77b-060c-4d2c-9855-5b75cce3112e" />
+
 
 
 Login Page: 
