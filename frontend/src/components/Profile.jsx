@@ -37,7 +37,7 @@ function Profile() {
       <div className="bg-[#1E1F29] min-h-screen text-white">
       <Navbar />
 
-      {/* Top Buttons */}
+
       <div className="flex gap-4 mt-8 px-6 justify-center">
         <Button
           className="px-6 py-2 rounded-xl text-white bg-[#2C2E3A] border border-[#3d4348] hover:bg-[#3A3C49] transition"
@@ -53,10 +53,10 @@ function Profile() {
         </Button>
       </div>
 
-      {/* Profile Card */}
+
       <div className="max-w-4xl mx-4 md:mx-auto rounded-2xl bg-[#282A36] border border-[#31353b] my-8 p-8 shadow-lg">
         <div className="flex justify-between items-start">
-          {/* Avatar + Info */}
+         
           <div className="flex items-center">
             <Avatar className="h-24 w-24 border-2 border-[#3d4348]">
               <AvatarImage src={user?.profile?.profilePhoto} />
@@ -67,7 +67,6 @@ function Profile() {
             </div>
           </div>
 
-          {/* Edit Button */}
           <UpdateProfile open={open} setOpen={setOpen} />
           <Button
             onClick={() => setOpen(true)}
@@ -78,7 +77,7 @@ function Profile() {
           </Button>
         </div>
 
-        {/* Contact Info */}
+      
         <div className="mt-6 space-y-3">
           <div className="flex items-center gap-3 text-gray-300">
             <Mail size={18} />
@@ -90,14 +89,14 @@ function Profile() {
           </div>
         </div>
 
-        {/* Skills */}
+     
         <div className="my-6">
           <h2 className="text-lg font-semibold mb-3">Skills</h2>
           <div className="flex flex-wrap gap-2">
             {user?.profile?.skills.length !== 0 ? (
               user?.profile?.skills.map((val, key) => (
                 <Badge
-                  className="bg-[#3A3C49] text-white font-medium px-3 py-1 rounded-xl hover:bg-[#4A4C5B] transition"
+                  className=" text-white font-medium px-3 py-1 rounded-xl bg-[#4A4C5B]"
                   key={key}
                 >
                   {valToCaptital(val)}
@@ -109,7 +108,7 @@ function Profile() {
           </div>
         </div>
 
-        {/* Resume */}
+   
         <div className="mt-6">
           <Label className="text-md font-semibold">Resume</Label>
           {isResume ? (
@@ -127,7 +126,7 @@ function Profile() {
         </div>
       </div>
 
-      {/* Applied Jobs */}
+ 
       <div
         ref={appliedRef}
         className="bg-[#282A36] border border-[#31353b]   max-w-4xl mx-4 md:mx-auto rounded-2xl my-8 p-8 shadow-md"
@@ -136,7 +135,7 @@ function Profile() {
         <Appliedjobs />
       </div>
 
-      {/* Saved Jobs */}
+
       <div
         ref={savedRef}
         className="bg-[#282A36] border border-[#31353b] max-w-4xl mx-4 md:mx-auto rounded-2xl my-8 p-8 shadow-md"
