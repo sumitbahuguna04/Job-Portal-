@@ -1,4 +1,3 @@
-<img width="1920" height="1080" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/fcafc1ca-142f-46c6-86da-9448d4bebb7d" /># Job Portal Website
 
 A full-stack Job Portal web application that allows users to browse job listings and companies to post job openings. Built using **Vite** for lightning-fast frontend development with **React**, and **Node.js** for a robust backend.
 
