@@ -1,4 +1,4 @@
-# Job Portal Website
+<img width="1920" height="1080" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/fcafc1ca-142f-46c6-86da-9448d4bebb7d" /># Job Portal Website
 
 A full-stack Job Portal web application that allows users to browse job listings and companies to post job openings. Built using **Vite** for lightning-fast frontend development with **React**, and **Node.js** for a robust backend.
 
@@ -16,39 +16,24 @@ HomePage :
 
 Login Page: 
 
-![Screenshot (66)](https://github.com/user-attachments/assets/872afd78-999b-4bc9-85a8-4082d5696623)
+
+<img width="1920" height="1080" alt="Screenshot (123)" src="https://github.com/user-attachments/assets/a81f40b5-7cd9-4e4f-ac77-05e31a84c8bd" />
 
 
 Singup Page:
 
-![Screenshot (67)](https://github.com/user-attachments/assets/e5d84df4-1100-49ab-b9e5-7ed3cedd54a6)
-
+<img width="1920" height="1080" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/8af596e8-2479-40dc-bdc7-008c2643017b" />
 
 Listed Jobs Page: 
 
-![Screenshot (70)](https://github.com/user-attachments/assets/3d7db72f-de75-462d-8b86-d98c122b54d6)
+<img width="1920" height="1080" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/f50c5f5d-ce94-42a3-841d-2117ac68c5d3" />
+
 
 
 User Profile Page:
-
-![Screenshot (71)](https://github.com/user-attachments/assets/4f2ddc3d-8f83-4f56-9770-52e789910c61)
-
-
-Post Jobs:
+<img width="1920" height="1080" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/277ba0da-053c-4a0e-97a0-cb2889351649" />
 
 
-![Screenshot (96)](https://github.com/user-attachments/assets/c861495d-3186-46f3-a9aa-dd17b8856f8c)
-
-
-Filter Job:
-
-![Screenshot (95)](https://github.com/user-attachments/assets/a458621d-8ffc-457f-bba9-76f71c276a09)
-
-
----
-
-Applicant Page:
-![Screenshot (78)](https://github.com/user-attachments/assets/dd2e42d2-5664-4a18-860d-7d96e19bb217)
 
 ## 🚀 Features
 
