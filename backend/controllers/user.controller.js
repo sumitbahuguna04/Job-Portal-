@@ -115,23 +115,28 @@ export const updateProfile = async (req, res) => {
     const file = req.file;
 
     const userId = req.id;
-    let user = await User.findById(userId); // ⬅️ Move this up
-
+    let user = await User.findById(userId);
     if (!user) {
       return res.status(400).json({
         message: "User not found.",
         success: false,
       });
     }
+const fileUri = getDataUri(file);
 
-    if (file) {
-      const fileUri = getDataUri(file);
-      const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
-      if (cloudResponse) {
-        user.profile.resume = cloudResponse.secure_url;
-        user.profile.resumeOriginalName = file.originalname;
-      }
-    }
+const cloudResponse = await cloudinary.uploader.upload(fileUri.content, {
+  resource_type: "raw"
+});
+
+if (cloudResponse) {
+ 
+  const viewUrl = cloudResponse.secure_url;
+
+  user.profile.resume = viewUrl;
+  user.profile.resumeOriginalName = file.originalname;
+}
+
+
 
     let skillsArray;
     if (skills) {
@@ -162,6 +167,15 @@ export const updateProfile = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+  }
+};
+
+export const checkAuth = (req, res) => {
+  try {
+    res.status(200).json(req.user);
+  } catch (error) {
+    console.log("Error in checkAuth controller", error.message);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };
 
