@@ -41,7 +41,7 @@ function LatestJobCard({ job }) {
 
       <div className="mb-2 sm:mb-4 ">
         <h1 className="font-bold  text-lg">{job?.title}</h1>
-        <p className="text-sm text-gray-400 mt-1">{job?.description}</p>
+      
       </div>
 
       <div className="flex text-black flex-wrap gap-3">
