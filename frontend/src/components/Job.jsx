@@ -106,9 +106,7 @@ function Job({ job }) {
 
     <div className="mb-3 flex-1">
       <h1 className="font-bold text-base sm:text-lg mb-1">{job?.title}</h1>
-      <p className="text-gray-400 text-sm break-words line-clamp-3">
-        {job?.description}
-      </p>
+     
     </div>
 
   
